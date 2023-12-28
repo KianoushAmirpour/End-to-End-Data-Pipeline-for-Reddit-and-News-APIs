@@ -21,8 +21,9 @@ jobs:
         python-version: '3.11'
 
     - name: Build docker compose 
-      run: docker compose build && docker compose up airflow-init && docker compose up -d
-      env: ENV
+      run: docker compose build -- && docker compose up airflow-init && docker compose up -d
+      env: 
+        .env : ${{ secrets.ENV }}
 
     - name: Test with pytest
       run: |
