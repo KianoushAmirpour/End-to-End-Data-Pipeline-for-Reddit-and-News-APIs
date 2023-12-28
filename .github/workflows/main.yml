@@ -22,6 +22,7 @@ jobs:
 
     - name: Build docker compose 
       run: docker compose build && docker compose up airflow-init && docker compose up -d
+      env: ENV
 
     - name: Test with pytest
       run: |
