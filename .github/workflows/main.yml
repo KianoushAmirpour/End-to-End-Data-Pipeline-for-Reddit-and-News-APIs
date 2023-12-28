@@ -1,0 +1,29 @@
+name: github actions for airflow dags
+
+on:
+  push:
+    paths:
+      - 'airflow/dags/**'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
+    - name: Set up python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Build docker compose 
+      run: docker compose build && docker compose up airflow-init && docker compose up -d
+
+    - name: Test with pytest
+      run: |
+        pip install pytest
+        pytest airflow/tests
