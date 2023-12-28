@@ -1,0 +1,13 @@
+
+__pycache__
+.vscode
+
+airflow/logs/
+airflow/tmp/
+
+*.log
+*.csv
+*.json
+*.md
+
+.env
