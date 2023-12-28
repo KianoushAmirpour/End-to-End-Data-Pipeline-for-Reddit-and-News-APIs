@@ -21,9 +21,8 @@ jobs:
         python-version: '3.11'
 
     - name: Build docker compose 
-      run: docker compose up -d
-      env: 
-        .env : ${{ secrets.ENV }}
+      run: envs=(${{ secrets.ENV }} | xargs -n1)
+        docker-compose up -d $(for env in "${envs[@]}"; do echo $env; done)
 
     - name: Test with pytest
       run: |
