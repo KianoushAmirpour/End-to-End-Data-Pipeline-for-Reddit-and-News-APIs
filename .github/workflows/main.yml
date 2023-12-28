@@ -20,10 +20,13 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Build docker compose 
-      run: envs=(${{ secrets.ENV }} | xargs -n1)
-        docker-compose up -d $(for env in "${envs[@]}"; do echo $env; done)
+    - name: Set up .env
+      run: echo "${{ secrets.ENV }}" > .env
 
+    - name: Build and Run Docker Compose
+      run: |
+        docker-compose-test up -d
+        
     - name: Test with pytest
       run: |
         pip install pytest
