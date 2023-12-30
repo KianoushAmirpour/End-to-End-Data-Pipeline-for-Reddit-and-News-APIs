@@ -5,6 +5,15 @@
 ## CI pipeline and airflow tests
 ## how to setup
 
+## Pipeline
+- Pipeline
+ 
+![pipeline](https://github.com/KianoushAmirpour/Reddit-News-Data-Pipeline/assets/112323618/15822741-d3b6-4950-ae73-8d82d01661e7)
+
+- Airflow dag
+  
+![dags](https://github.com/KianoushAmirpour/Reddit-News-Data-Pipeline/assets/112323618/eb634b1e-2145-4fb8-8d41-6353ef5dac9c)
+
 ## Workflow
 
 - Data is collected from two APIs (reddit API and News API) for a specified subject.
@@ -37,15 +46,4 @@
 - Transformation : Pandas
 - Cloud Storage Buckets : Minio
 - Data Warehouse: PostgreSQL
-
-## Pipeline
-- Pipeline
- 
-![pipeline](https://github.com/KianoushAmirpour/Reddit-News-Data-Pipeline/assets/112323618/15822741-d3b6-4950-ae73-8d82d01661e7)
-
-- Airflow dag
-  
-![dags](https://github.com/KianoushAmirpour/Reddit-News-Data-Pipeline/assets/112323618/eb634b1e-2145-4fb8-8d41-6353ef5dac9c)
-
-
 
