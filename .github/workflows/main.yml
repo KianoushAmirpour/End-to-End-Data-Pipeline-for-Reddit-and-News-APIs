@@ -1,9 +1,6 @@
 name: Tests for airflow dag
 
-on:
-  push:
-    paths:
-      - 'airflow/dags/**'
+on: [push]
       
 jobs:
   Test:
