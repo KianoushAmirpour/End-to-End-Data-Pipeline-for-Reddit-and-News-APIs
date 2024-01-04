@@ -61,3 +61,6 @@
 8. Run `docker compose up`
 9. Schedule your airflow dag or you can trigger it manually.
 10. Run `docker compose down`.
+
+### Chat with database
+Utilizing Langchain and Hugging Face, we leveraged the Language Models' capability to interact with the database.
