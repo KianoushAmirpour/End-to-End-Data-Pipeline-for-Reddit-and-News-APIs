@@ -1,5 +1,4 @@
 ## Reddit-News-Data-Pipeline
-### test and ci pirpline
 
 ### Pipeline
 - Pipeline
